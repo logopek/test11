@@ -12,6 +12,6 @@ while True:
     data = conn.recv(1024)
     if not data:
         break
-    conn.send(data.upper())
+    conn.send("""Hello, World!""")
 
 conn.close()
