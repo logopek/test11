@@ -60,4 +60,5 @@ if __name__ == '__main__':
   serv = MyHTTPServer(host, port, name)
   try:
     serv.serve_forever()
-  except K
+  except KeyboardInterrupt:
+    pass
