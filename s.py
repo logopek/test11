@@ -4,7 +4,7 @@ app = Flask(__name__)
 text_to_return = "Hi!"
 @app.route("/")
 def hello_world():
-    s = "Hello, World!"
+    s = "Hello!"
     response = make_response(s)
     response.headers.add('content-length', str(len(s.encode('utf-8'))))
     return response
