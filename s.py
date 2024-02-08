@@ -11,8 +11,8 @@ def hello_world():
 
 @app.route("/newMsg", methods = ["POST"])
 def newMsg():
-    print(request)
-    global text_to_return
-    x = json.loads(request.json)
-    text_to_return = x["text"]
+    print(request.data)
+
+
+
 app.run(host="0.0.0.0",port = 8190)
