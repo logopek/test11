@@ -11,4 +11,4 @@ def newMsg():
     global text_to_return
     x = json.loads(request.json)
     text_to_return = x["text"]
-app.run(port = 8190)
+app.run(host="0.0.0.0",port = 8190)
