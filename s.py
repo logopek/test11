@@ -15,3 +15,6 @@ def newMsg():
     x = json.loads(request.data)
     text_to_return = x["text"]
     return "0"
+
+
+app.run(host="0.0.0.0",port = 8190)
