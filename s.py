@@ -1,7 +1,7 @@
 from flask import Flask, request
 import json
 app = Flask(__name__)
-text_to_return = "Hello, World"
+text_to_return = "Hi!"
 @app.route("/")
 def hello_world():
     return text_to_return
