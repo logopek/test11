@@ -10,4 +10,4 @@ def index():
 @app.route("/love")
 def love():
     return "Конечно, это все шутки, Настя лучшая!"
-app.run(host="0.0.0.0",port = 443)
+app.run(host="0.0.0.0",port = 8190)
