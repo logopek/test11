@@ -8,6 +8,7 @@ def hello_world():
 
 @app.route("/newMsg", methods = ["POST"])
 def newMsg():
+    print(request.json)
     global text_to_return
     x = json.loads(request.json)
     text_to_return = x["text"]
