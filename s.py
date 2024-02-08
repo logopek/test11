@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return """Настя лошара
-    <a style="display:none" href="/love">Правильно мыслишь)</a>
+    <a style="display:none" href="https://github.com/logopek">Правильно мыслишь)</a>
     """
 
 @app.route("/love")
