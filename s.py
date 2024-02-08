@@ -1,8 +1,14 @@
-from flask import Flask
-
+from flask import Flask, request
+import json
 app = Flask(__name__)
-
+text_to_return = "Hello, World"
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return text_to_return
+
+@app.route("/newMsg", methods = ["POST"])
+def newMsg():
+    global text_to_return
+    x = json.loads(request.json)
+    text_to_return = x["text"]
 app.run(port = 8190)
