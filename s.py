@@ -1,10 +1,12 @@
-from flask import Flask, request
+from flask import Flask, request, make_response
 import json
 app = Flask(__name__)
 text_to_return = "Hi!"
 @app.route("/")
 def hello_world():
-    return text_to_return
+    s = "Hello, World!"
+    response = make_response(s)
+    response.headers.add('content-length', str(len(s.encode('utf-8'))))
 
 @app.route("/newMsg", methods = ["POST"])
 def newMsg():
