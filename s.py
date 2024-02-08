@@ -12,7 +12,7 @@ def hello_world():
 @app.route("/newMsg", methods = ["POST"])
 def newMsg():
     print(request.data)
-
+    return "0"
 
 
 app.run(host="0.0.0.0",port = 8190)
